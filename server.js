@@ -37,7 +37,7 @@ app.post('/', function(req, res){
 	// use the on method https://www.tropo.com/docs/webapi/on.htm
 	tropo.on("continue", null, "/answer", true);
 
-	console.log(tropoapi.TropoJSON(tropo));
+	// console.log(tropoapi.TropoJSON(tropo));
 
     res.send(tropoapi.TropoJSON(tropo));
 });
