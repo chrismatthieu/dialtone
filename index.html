@@ -1,0 +1,24 @@
+<html>
+<head>
+ <link type="text/css" rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/themes/blitzer/jquery-ui.css"/>
+ <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+ <script type="text/javascript" src="http://s.phono.com/releases/0.2/jquery.phono.js"></script>
+ <script type="text/javascript" src="http://s.phono.com/addons/callme/79a53b7/jquery.callme.js"></script>
+</head>
+<body>
+<h1>Tropo Voice Dialtone</h1>
+<p>This is a Node.JS-powered <a href="http://tropo.com">Tropo</a>/<a href="http://phono.com">Phono</a> application. Click the button below and say or enter a 10 digit number that you would like to dial and we will do the rest.</p>	
+ <script type="text/javascript">
+  $("body").append(
+   $("<div/>")
+    .css("width","210px")
+    .callme({
+      apiKey: "C17D167F-09C6-4E4C-A3DD-2025D48BA243",
+      numberToDial: "app:9991490086",
+      buttonTextReady: "Call Someone",
+      slideOpen:true
+    })
+  )
+ </script>
+</body>
+</html>
