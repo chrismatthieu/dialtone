@@ -3,6 +3,9 @@
  * Express must be installed for this sample to work
  */
 
+// Added for CloudFoundary (directory created with npm bundle)
+require.paths.unshift('./node_modules')
+
 var tropoapi = require('tropo-webapi');
 var express = require('express');
 var app = express.createServer(); 
@@ -57,6 +60,7 @@ app.post('/answer', function(req, res){
 	res.send(tropoapi.TropoJSON(tropo));
 });
 
-app.listen(8000);
+// app.listen(8000);
+app.listen(process.env.VMC_APP_PORT || 8000);
 // console.log('Server running on http://0.0.0.0:8000/')
 
